@@ -14,6 +14,6 @@ RUN apt-get -qq update \
 
 ADD conf/supervisord.conf /etc/supervisor/conf.d/sickrage.conf
 RUN git clone https://github.com/SickRage/SickRage.git /sickrage \
- && mkdir -p /sickrage/Logs/supervisor
+ 	; mkdir -p /sickrage/Logs/supervisor
 
 CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/conf.d/sickrage.conf"]
