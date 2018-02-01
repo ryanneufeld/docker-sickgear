@@ -1,4 +1,4 @@
-FROM ubuntu:trusty
+FROM ubuntu:14.04
 
 MAINTAINER Ryan Neufeld <ryan@neucode.org>
 
