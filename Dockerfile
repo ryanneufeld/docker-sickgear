@@ -7,7 +7,7 @@ EXPOSE 8081/tcp
 ENV DEBIAN_FRONTEND noninteractive
 
 RUN echo "Installing deadsnakes-python2.7" \
- && apt-get -yf install software-properties-common
+ && apt-get -yf install software-properties-common \
  && apt-add-repository -y ppa:fkrull/deadsnakes-python2.7 \
  && apt-get -q update \
  && apt-get install -yf --force-yes python2.7 python2.7-dev python-pip libcurl4-openssl-dev \
