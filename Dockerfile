@@ -10,10 +10,11 @@ RUN apt-get -qq update \
  && apt-get -yf install software-properties-common \
  && apt-add-repository multiverse \
  && apt-get -qq update \
- && apt-get -yf install supervisor python python-pip unzip libssl-dev git python-dev unrar libffi-dev
+ && apt-get -yf install supervisor python python-pip unzip libssl-dev git python-dev unrar libffi-dev python-cheetah unrar-free git
 
 ADD conf/supervisord.conf /etc/supervisor/conf.d/sickrage.conf
-RUN git clone https://github.com/SickRage/SickRage.git /sickrage
-RUN mkdir -p /sickrage/Logs/supervisor
+# RUN python -m pip install cheeta lxml regex scandir
+RUN git clone https://github.com/SickGear/SickGear.git /sickgear
+RUN mkdir -p /sickgear/Logs/supervisor
 
-CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/conf.d/sickrage.conf"]
+CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/conf.d/sickgear.conf"]
