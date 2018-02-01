@@ -20,4 +20,4 @@ RUN mkdir -p /data
 
 VOLUME /data
 
-CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/conf.d/sickgear.conf"]
+CMD ["/usr/bin/supervisord"]
