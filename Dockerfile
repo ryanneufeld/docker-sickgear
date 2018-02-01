@@ -16,5 +16,8 @@ ADD conf/supervisord.conf /etc/supervisor/conf.d/sickgear.conf
 # RUN python -m pip install cheeta lxml regex scandir
 RUN git clone https://github.com/SickGear/SickGear.git /sickgear
 RUN mkdir -p /sickgear/Logs/supervisor
+RUN mkdir -p /data
+
+VOLUME /data
 
 CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/conf.d/sickgear.conf"]
