@@ -1,1 +1,1 @@
-docker run --name=sickgear --net=host -v /data/downloads:/downloads:rw -v /data/dropbox/Dropbox/Torrents:/torrents:rw -v /media:/media:r -v /data/sickgear:/sickgear:rw -d -p 8081:8081 --restart always sickgear
+docker run --name=sickgear --net=host -v /data/downloads:/downloads:rw -v /data/dropbox/Dropbox/Torrents:/torrents:rw -v /media:/media:ro -v /data/sickgear:/sickgear:rw -d -p 8081:8081 --restart always sickgear
