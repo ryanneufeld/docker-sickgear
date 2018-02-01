@@ -12,7 +12,7 @@ RUN apt-get -qq update \
  && apt-get -qq update \
  && apt-get -yf install supervisor python python-pip unzip libssl-dev git python-dev unrar libffi-dev python-cheetah unrar-free git
 
-ADD conf/supervisord.conf /etc/supervisor/conf.d/sickrage.conf
+ADD conf/supervisord.conf /etc/supervisor/conf.d/sickgear.conf
 # RUN python -m pip install cheeta lxml regex scandir
 RUN git clone https://github.com/SickGear/SickGear.git /sickgear
 RUN mkdir -p /sickgear/Logs/supervisor
